@@ -12,7 +12,11 @@ def complementaire(brin: str) -> str:
     """Retourne le brin d'ADN complémentaire."""
     # À toi de jouer : parcours chaque lettre du brin,
     # cherche sa partenaire dans PAIRES, et assemble le résultat.
-    pass
+    resultat = ""
+    for lettre in brin:
+        resultat = resultat + PAIRES[lettre]
+        
+    return resultat
 
 
 if __name__ == "__main__":
