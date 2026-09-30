@@ -8,15 +8,17 @@ Chaque lettre est TOUJOURS remplacée par sa partenaire.
 PAIRES = {"A": "T", "T": "A", "C": "G", "G": "C"}
 
 
-def complementaire(brin: str) -> str:
+def complementaire(brin.upper(): str) -> str:
     """Retourne le brin d'ADN complémentaire."""
     # À toi de jouer : parcours chaque lettre du brin,
     # cherche sa partenaire dans PAIRES, et assemble le résultat.
     resultat = ""
-    for lettre in brin:
-        resultat = resultat + PAIRES[lettre]
-        
-    return resultat
+    if lettre not in PAIRES:
+        raise ValueError(f"Lettre invalide dans le brin : {lettre}")
+    elif
+        for lettre in brin:
+            resultat = resultat + PAIRES[lettre]
+        return resultat
 
 
 if __name__ == "__main__":
@@ -25,4 +27,6 @@ if __name__ == "__main__":
     assert complementaire("ATGCCA") == "TACGGT"
     assert complementaire("GATTCA") == "CTAAGT"
     assert complementaire("TGCAATCG") == "ACGTTAGC"
+    assert complementaire("atgc") == "TACG"
+    assert complementaire("ATNGC") == "TANCG"
     print("Tous les tests passent ! 🎉")
