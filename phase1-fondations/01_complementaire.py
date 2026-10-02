@@ -17,7 +17,7 @@ def complementaire(brin: str) -> str:
         if lettre not in PAIRES:
             raise ValueError(f"Lettre invalide dans le brin est : {lettre}")
         
-        return "".join(PAIRES[lettre] for lettre in brin)
+    return "".join(PAIRES[lettre] for lettre in brin)
 
 
 if __name__ == "__main__":
