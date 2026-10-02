@@ -5,7 +5,7 @@ Règle d'appariement de l'ADN : A <-> T et C <-> G.
 Chaque lettre est TOUJOURS remplacée par sa partenaire.
 """
 
-PAIRES = {"A": "T", "T": "A", "C": "G", "G": "C"}
+PAIRES = {"A": "T", "T": "A", "C": "G", "G": "C","N": "N"}
 
 
 def complementaire(brin: str) -> str:
